@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="css.js"></script>
+    <link rel="stylesheet" href="script.css">
+   
+</head>
+<body id="clr">
+    <form action="mailto:rkysandeepyadav@gmail.com"method="post" enctype="text/plain" onsubmit="return validatefrom()">
+       <h5 id="imge"><img src="download.jpeg" alt=""></h5>
+        <br><br>
+       <center>
+           
+        <table border="5">
+         
+<tr>
+      <h1><td><label id="name">Your name :</label></td></h1>
+         <td><input type="text" name="name" value="" placeholder="USERNAME" id = "username"></td>
+            <td> <input type="checkbox" name=""value=""></td>
+</tr>
+<tr>
+                <td> <label id="email">Email I'd:</label></td>
+                    <td>  <input type="text" name="Email" value="" placeholder="xyz@gmail.com" id="username"></td>
+                        <td> <input type="checkbox" name=""value=""></td>
+</tr>
+<tr>
+                           <h1> <td> <label id="password">password:</label></td></h1>
+                                <td> <input type="password" name="password" value="" placeholder="username" id="password"></td>
+                                    <td><input type="checkbox" name=""value=""></td>
+</tr>
+<tr>
+                                        <td> <label id="date">Date:</label></td>
+                                            <td><input type="date" name="data" value=""></td>
+                                                <td> <input type="checkbox" name=""value=""><br><br></td>
+</tr>
+<tr>
+                                                    <h1  id="h"><td><label class="green-text">Mb.No:</label></td></h1>
+                                                        <td> <input type="number"  name=""value=""></td>
+</tr>
+<tr>
+                                                        <td><label>File/Certificate</label></td>   
+                                                          <td><label><input type="file"></label></td>
+</tr>
+
+<tr>
+                                                            <td> <label>message:</label></td>
+                                                                <td><textarea name="message" row="8" cols="80" id="username"></textarea></td>
+                                                                    <td><input type="checkbox" name=""value=""></td>
+</tr>
+
+        <td> 
+            
+            <input id="submit" type="submit"  name=""></td>
+        
+        </td>
+    </table>
+ </form>
+</div>
+<script>
+    let username = document.getElementById("username");
+    <p id="usererror" class="error"></p>
+    let flag = 1;
+    function validatefrom(){
+        if(username.value == ""){
+            document.getElementById("usererror").innerHTML="username is empty";
+            flag = 0;
+        }else if(username.value.length < 6){
+            document.getElementById("usererror").innerHTML="username requred min 6 char";
+            flag = 0;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
